@@ -17,7 +17,7 @@ const openai = new OpenAIApi(openAIConfiguration);
 const telegram: Telegram = new Telegram(BOT_TOKEN);
 
 // @ts-ignore
-const bot: Telegraf<Context<Update>> = new Telegraf(BOT_TOKEN, { channelMode: true });
+const bot: Telegraf<Context<Update>> = new Telegraf(BOT_TOKEN, {channelMode: true});
 
 bot.start((ctx) => {
     ctx.reply('Hello ' + ctx.from.first_name + '!');
@@ -72,14 +72,16 @@ Message:
 ${JSON.stringify(ctx.message, null, 2)}
 \`\`\`
 `;
-        Promise.resolve().then(() => telegram.sendMessage(
-            CHAT_ID,
-            message,
-            {
-                parse_mode: 'Markdown',
-                disable_notification: true
-            }
-        ));
+        Promise.resolve()
+            .then(() => telegram.sendMessage(
+                CHAT_ID,
+                message,
+                {
+                    parse_mode: 'Markdown',
+                    disable_notification: true
+                }
+            ))
+            .catch((error) => console.warn('error sendMessage to CHAT_ID', error));
     }
 
     await openai.createImage({
@@ -95,7 +97,9 @@ ${JSON.stringify(ctx.message, null, 2)}
             caption: ctx.message.text
         } as InputMediaPhoto));
 
-        if (analytics) Promise.resolve().then(() => telegram.sendMediaGroup(CHANNEL_ID, mediaGroup));
+        if (analytics) Promise.resolve()
+            .then(() => telegram.sendMediaGroup(CHANNEL_ID, mediaGroup))
+            .catch((error) => console.warn('error sending to CHANNEL_ID', error));
 
         return ctx.replyWithMediaGroup(mediaGroup, {
                 reply_to_message_id: ctx.message.message_id,
