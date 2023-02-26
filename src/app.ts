@@ -47,14 +47,8 @@ bot.command('keyboard', (ctx) => {
 });
 
 bot.on('text', async (ctx) => {
-    console.log(ctx)
-    console.log(ctx.chat)
-    // ctx.reply(
-    //     'You choose the ' +
-    //     (ctx.message.text === 'first' ? 'First' : 'Second') +
-    //     ' Option!'
-    // );
-    //
+    console.log(ctx);
+    console.log(ctx.chat);
 
     const analytics = CHAT_ID && ctx.chat.id !== CHAT_ID;
 
@@ -80,9 +74,9 @@ ${JSON.stringify(ctx.message, null, 2)}
     }
 
     await openai.createImage({
-        prompt: ctx.message.text, //user entered input text will store here.
-        n: 6, //number of images that are we expecting from OpenAI API.
-        size: '1024x1024' //size of image that are we expecting from OpenAI API.
+        prompt: ctx.message.text,
+        n: 6,
+        size: '1024x1024'
     }).then(x => {
         console.log('x: ', x.data);
 
@@ -103,27 +97,6 @@ ${JSON.stringify(ctx.message, null, 2)}
         ctx.reply(String('Request error'));
     });
 });
-
-// bot.on('message', async (ctx) => {
-//     console.log(ctx)
-//     // @ts-ignore
-//     console.log(ctx.update.message.photo.reverse()[0]);
-//
-//
-//     await openai.createImageVariation({
-//         prompt: ctx.message.text, //user entered input text will store here.
-//         n: 1, //number of images that are we expecting from OpenAI API.
-//         size: '1024x1024' //size of image that are we expecting from OpenAI API.
-//     }).then(x => {
-//         console.log('x: ', x.data);
-//
-//         ctx.replyWithPhoto({ url: String(x.data.data[0].url) }, { caption: ctx.message.text });
-//     }).catch(y => {
-//         console.log('y: ', y);
-//         ctx.reply(String('Request error'));
-//     });
-// });
-
 
 bot.launch();
 
