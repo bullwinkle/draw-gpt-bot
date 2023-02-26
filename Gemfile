@@ -7,6 +7,8 @@ gem "jekyll-feed", "~> 0.16.0"
 # Theme
 gem "jekyll-theme-cayman"
 
+gem "github-pages", group: :jekyll_plugins
+
 # Development dependencies
 group :jekyll_plugins do
   gem "jekyll-sitemap", "~> 1.4.0"
