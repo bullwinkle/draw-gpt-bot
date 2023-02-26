@@ -9,7 +9,7 @@ With DrawBot, you can send any prompt, and it will create a drawing based on wha
 How to Use DrawBot
 ------------------
 
-Using DrawBot is simple. Just add @DrawGPTBot to your Telegram contacts, and start a chat with it. From there, you can send it any prompt you like, and it will respond with a unique drawing based on your input.
+Using DrawBot is simple. Just add [@DrawGPTBot](https://t.me/DrawGPTBot) to your Telegram contacts, and start a chat with it. From there, you can send it any prompt you like, and it will respond with a unique drawing based on your input.
 
 How DrawBot Works
 -----------------
@@ -24,6 +24,6 @@ DrawBot is the perfect tool for anyone looking to add a personal touch to their 
 Get Started with DrawBot Today
 ------------------------------
 
-Ready to start using DrawBot? Just add @DrawGPTBot to your Telegram contacts, and start chatting! With its advanced GPT-3 technology, DrawBot is the perfect tool for anyone looking to add a personal touch to their messages. So why wait? Start using DrawBot today and take your messaging game to the next level!
+Ready to start using DrawBot? Just add [@DrawGPTBot](https://t.me/DrawGPTBot) to your Telegram contacts, and start chatting! With its advanced GPT-3 technology, DrawBot is the perfect tool for anyone looking to add a personal touch to their messages. So why wait? Start using DrawBot today and take your messaging game to the next level!
 
 ---
