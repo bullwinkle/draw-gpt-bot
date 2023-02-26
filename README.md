@@ -30,9 +30,4 @@ Our public <a href="https://t.me/drawGPTBotPictures" target="_blank">DrawBot cha
 
 To subscribe, simply search for "@DrawBotChannel" on Telegram and click the "Join" button. From there, you'll have access to all the amazing paintings created by DrawBot, as well as news and updates about the bot itself.
 
-Get Started with DrawBot Today
-------------------------------
-
-Ready to start using DrawBot? Just add <a href="https://t.me/DrawGPTBot" target="_blank">@DrawBot</a> to your Telegram contacts, and start chatting! With its advanced GPT-3 technology, DrawBot is the perfect tool for anyone looking to add a personal touch to their messages. So why wait? Start using DrawBot today and take your messaging game to the next level!
-
 ---
