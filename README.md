@@ -1,3 +1,5 @@
+---
+
 # DrawBot: Your Personal Drawing Assistant on Telegram
 
 Are you tired of trying to find the perfect image for your message, only to be left with endless searching and disappointment? Look no further than DrawBot, your personal drawing assistant on Telegram!
@@ -10,13 +12,9 @@ With DrawBot, you can send any prompt, and it will create a drawing based on wha
 
 Using DrawBot is simple. Just add <a href="https://t.me/DrawGPTBot" target="_blank">@DrawBot</a> to your Telegram contacts, and start a chat with it. From there, you can send it any prompt you like, and it will respond with a unique drawing based on your input.
 
----
-
 ## How DrawBot Works
 
 DrawBot uses GPT-3 technology to understand your message and generate a drawing based on its interpretation. GPT-3 is a cutting-edge language processing AI that has been trained on a massive dataset of text, allowing it to generate incredibly realistic and accurate responses to any given prompt.
-
----
 
 ## Why Choose DrawBot
 
@@ -26,16 +24,8 @@ DrawBot is the perfect tool for anyone looking to add a personal touch to their 
 
 ## Subscribe to DrawBot's Public Channel
 
-
 Want to see all the amazing paintings DrawBot creates? Make sure to subscribe to our public channel on Telegram!
 
 Our public <a href="https://t.me/drawGPTBotPictures" target="_blank">DrawBot channel</a>, is where we showcase all the latest and greatest paintings created by DrawBot. From stunning landscapes to whimsical cartoons, you'll find it all on our channel.
 
 To subscribe, simply search for "@DrawBotChannel" on Telegram and click the "Join" button. From there, you'll have access to all the amazing paintings created by DrawBot, as well as news and updates about the bot itself.
-
----
-
-## Get Started with DrawBot Today
-
-
-Ready to start using DrawBot? Just add <a href="https://t.me/DrawGPTBot" target="_blank">@DrawBot</a> to your Telegram contacts, and start chatting! With its advanced GPT-3 technology, DrawBot is the perfect tool for anyone looking to add a personal touch to their messages. So why wait? Start using DrawBot today and take your messaging game to the next level!
