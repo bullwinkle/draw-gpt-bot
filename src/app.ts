@@ -3,10 +3,10 @@ import {Update} from 'typegram';
 import {Configuration as OpenAIConfiguration, OpenAIApi} from "openai";
 import {InputMediaPhoto} from "telegraf/types";
 
-const IS_PRODUCTION = process.env.NODE_ENV == 'production';
 const CHAT_ID = Number(process.env.CHAT_ID || 0);
 const OPEN_AI_API_KEY = process.env.OPENAI_TOKEN as string;
 const BOT_TOKEN = process.env.BOT_TOKEN as string;
+// const IS_PRODUCTION = process.env.NODE_ENV == 'production';
 
 const openAIConfiguration = new OpenAIConfiguration({
     apiKey: OPEN_AI_API_KEY,
