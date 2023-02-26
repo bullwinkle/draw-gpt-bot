@@ -3,7 +3,8 @@ import {Update} from 'typegram';
 import {Configuration as OpenAIConfiguration, OpenAIApi} from "openai";
 import {InputMediaPhoto} from "telegraf/types";
 
-const CHAT_ID = Number(process.env.CHAT_ID || 0);
+const CHAT_ID = process.env.CHAT_ID as string;
+const CHANNEL_ID = process.env.CHANNEL_ID as string;
 const OPEN_AI_API_KEY = process.env.OPENAI_TOKEN as string;
 const BOT_TOKEN = process.env.BOT_TOKEN as string;
 // const IS_PRODUCTION = process.env.NODE_ENV == 'production';
@@ -15,7 +16,8 @@ const openai = new OpenAIApi(openAIConfiguration);
 
 const telegram: Telegram = new Telegram(BOT_TOKEN);
 
-const bot: Telegraf<Context<Update>> = new Telegraf(BOT_TOKEN);
+// @ts-ignore
+const bot: Telegraf<Context<Update>> = new Telegraf(BOT_TOKEN, { channelMode: true });
 
 bot.start((ctx) => {
     ctx.reply('Hello ' + ctx.from.first_name + '!');
@@ -46,11 +48,18 @@ bot.command('keyboard', (ctx) => {
     );
 });
 
+bot.command('getchatid', (ctx) => {
+    const chatId = ctx.message.chat.id
+    ctx.reply(`The ID of this chat is ${chatId}`)
+})
+
+
 bot.on('text', async (ctx) => {
     console.log(ctx);
     console.log(ctx.chat);
 
-    const analytics = CHAT_ID && ctx.chat.id !== CHAT_ID;
+    // const analytics = CHAT_ID && String(ctx.chat.id) !== CHAT_ID;
+    const analytics = !!CHAT_ID;
 
     if (analytics) {
         const message = `
@@ -86,7 +95,7 @@ ${JSON.stringify(ctx.message, null, 2)}
             caption: ctx.message.text
         } as InputMediaPhoto));
 
-        if (analytics) Promise.resolve().then(() => telegram.sendMediaGroup(CHAT_ID, mediaGroup));
+        if (analytics) Promise.resolve().then(() => telegram.sendMediaGroup(CHANNEL_ID, mediaGroup));
 
         return ctx.replyWithMediaGroup(mediaGroup, {
                 reply_to_message_id: ctx.message.message_id,
