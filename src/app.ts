@@ -64,10 +64,12 @@ bot.on('text', async (ctx) => {
     if (analytics) {
         const message = `
 From:
+
 \`\`\`JSON
 ${JSON.stringify(ctx.from, null, 2)}
 \`\`\`
 Message:
+
 \`\`\`JSON
 ${JSON.stringify(ctx.message, null, 2)}
 \`\`\`
