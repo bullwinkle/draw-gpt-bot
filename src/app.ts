@@ -7,7 +7,6 @@ const CHAT_ID = process.env.CHAT_ID as string;
 const CHANNEL_ID = process.env.CHANNEL_ID as string;
 const OPEN_AI_API_KEY = process.env.OPENAI_TOKEN as string;
 const BOT_TOKEN = process.env.BOT_TOKEN as string;
-// const IS_PRODUCTION = process.env.NODE_ENV == 'production';
 
 const openAIConfiguration = new OpenAIConfiguration({
     apiKey: OPEN_AI_API_KEY,
