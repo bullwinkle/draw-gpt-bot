@@ -86,8 +86,8 @@ ${JSON.stringify(ctx.message, null, 2)}
 
     await openai.createImage({
         prompt: ctx.message.text,
-        n: 6,
-        size: '1024x1024'
+        n: 3,
+        size: '512x512'
     }).then(x => {
         console.log('x: ', x.data);
 
