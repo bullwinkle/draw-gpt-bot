@@ -1,32 +1,3 @@
-# Site settings
-title: DrawBot
-description: Your Personal Drawing Assistant on Telegram
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://your-username.github.io/drawbot-landing-page" # the base hostname & protocol for your site
-repository: "https://github.com/your-username/drawbot-landing-page" # the URL to your repository on GitHub
-markdown: kramdown
-
-# Build settings
-theme: jekyll-theme-cayman
+remote_theme: pages-themes/cayman@v0.2.0
 plugins:
-  - jekyll-feed
-
-# Exclude from processing.
-# The following paths will be excluded by default:
-# .sass-cache/
-# .jekyll-cache/
-# .jekyll-metadata
-# Gemfile
-# Gemfile.lock
-# node_modules/
-# vendor/
-# _site/
-exclude:
-  - Gemfile
-  - Gemfile.lock
-  - node_modules
-  - vendor
-  - _site
-
-# Permalinks
-permalink: /:title.html
+- jekyll-remote-theme # add this line to the plugins list if you already have one
