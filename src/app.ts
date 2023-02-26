@@ -16,8 +16,7 @@ const openai = new OpenAIApi(openAIConfiguration);
 
 const telegram: Telegram = new Telegram(BOT_TOKEN);
 
-// @ts-ignore
-const bot: Telegraf<Context<Update>> = new Telegraf(BOT_TOKEN, {channelMode: true});
+const bot: Telegraf<Context<Update>> = new Telegraf(BOT_TOKEN);
 
 bot.start((ctx) => {
     ctx.reply('Hello ' + ctx.from.first_name + '!');
